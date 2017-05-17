@@ -88,5 +88,15 @@ namespace ProvaAPIWeb
             httpWebRequest.Method = "DELETE";
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
         }
+
+        public static void SendPatologiaToServer(Patologia p) {
+
+            Patologia tmpPat = new Patologia();
+
+            //TODO: Associare il contenuto delle txtBox ai campi della patologia.
+            //Chiamare il Serializzatore
+            //Inviare il Json della nuova Patologia
+            
+        }
     }
 }

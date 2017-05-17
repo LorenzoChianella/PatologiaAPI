@@ -43,21 +43,8 @@ namespace ProvaAPIWeb
             ApiRestClient.DeletePatologia(s);
             GridView1.DataBind();
 
-            //Patologia tmpPat = new Patologia();
-
-            //tmpPat.cod_patologia = row.Cells[1].Text;
-            //tmpPat.nome = row.Cells[2].Text;
-            //tmpPat.descrizione = row.Cells[3].Text;
-
-
-
-
-
             // recuperare il codice della patologia associato alla riga eliminata
             // inviare tale codice ( mediante le classi del webclient ) al webservice di tipo restful esposto, in formato JSON.
-
-
-
         }
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
