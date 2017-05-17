@@ -65,21 +65,28 @@ namespace ProvaAPIWeb
         }
 
 
-        public static bool SendCertificatiToServer(List<Certificato> cList)
-        {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://url");
-            httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Method = "POST";  
+        //public static bool SendCertificatiToServer(List<Certificato> cList)
+        //{
+        //    var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://url");
+        //    httpWebRequest.ContentType = "application/json";
+        //    httpWebRequest.Method = "POST";  
             
                       
 
-            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-            {
-                var result = streamReader.ReadToEnd();
-            }
+        //    var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+        //    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+        //    {
+        //        var result = streamReader.ReadToEnd();
+        //    }
 
-            return true;
+        //    return true;
+        //}
+
+        public static void DeletePatologia(string s)
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.4.159:8080/ApiServer2/Patologia/delete/" + s);
+            httpWebRequest.Method = "DELETE";
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
         }
     }
 }

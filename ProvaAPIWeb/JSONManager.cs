@@ -11,6 +11,7 @@ namespace ProvaAPIWeb
 {
     public class JSONManager
     {
+        //Funzione che deserializza il JSON che arriva dall'API Server (che contiene i dati dal DataBase
         public static T DeserializeJson<T>(string json)
         {
             T result;
@@ -22,24 +23,14 @@ namespace ProvaAPIWeb
             return result;
         }
 
-
-        public static void SerializeJson(List<Certificato> cList, HttpWebRequest request)
+        //Serializza i dati dellein JSON e li invia al server
+        public static string SerializePatologiaJson(Patologia p)
         {
-            using (var streamWriter = new StreamWriter(request.GetRequestStream()))
-            {
-                //string json = new JavaScriptSerializer().Serialize(new
-                //{
-                //    user = "Foo",
-                //    password = "Baz"
-                //});
-
-                string json = "{\"user\":\"test\"," +
-                  "\"password\":\"bla\"}";
-
-                streamWriter.Write(json);
-                streamWriter.Flush();
-                streamWriter.Close();
-            }
+            string json = "{\"+cod_patologia\":\"" + p.cod_patologia + "\"," +
+                           "\"nome\":\"" + p.nome + "\"," +
+                           "\"descrizione\":\"" + p.descrizione +"\"}";
+            return json;
         }
     }
 }
+

@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Runtime.Serialization.Json;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProvaAPIWeb
+{
+    public class JSONManager
+    {
+        //Funzione che deserializza il JSON che arriva dall'API Server (che contiene i dati dal DataBase
+        public static T DeserializeJson<T>(string json)
+        {
+            T result;
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(T));
+            using (MemoryStream ms = new MemoryStream(Encoding.Unicode.GetBytes(json)))
+            {
+                result = (T)serializer.ReadObject(ms);
+            }
+            return result;
+        }
+
+        //Serializza i dati in JSON e li invia al server
+        public static void SerializeJson(string s, HttpWebRequest request)
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("url Api Server");
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
+
+            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            {
+                string json = "{\"user\":\"test\"," +
+                              "\"password\":\"bla\"}";
+
+                streamWriter.Write(json);
+                streamWriter.Flush();
+                streamWriter.Close();
+            }
+
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+            }
+        }
+    }
+}

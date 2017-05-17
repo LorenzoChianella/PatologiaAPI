@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace ProvaAPIWeb
 {
+    // Oggetto Generico che contiene la data di sistema, il totale degli oggetti, 
+    //la lista degli oggetti(generici), e il numero di oggetti in essa contenuti.
     [DataContract]
     public class RootObject<T>
     {
-        [DataMember]
+        [DataMember] 
         public string datetime { get; set; }
         [DataMember]
         public int total { get; set; }
