@@ -67,6 +67,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="InserisciPatologia.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -82,6 +83,13 @@
   <ItemGroup>
     <Compile Include="ApiRestClient.cs" />
     <Compile Include="Certificato.cs" />
+    <Compile Include="InserisciPatologia.aspx.cs">
+      <DependentUpon>InserisciPatologia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InserisciPatologia.aspx.designer.cs">
+      <DependentUpon>InserisciPatologia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="JSONManager.cs" />
     <Compile Include="Patologia.cs" />
     <Compile Include="Patologie.aspx.cs">
