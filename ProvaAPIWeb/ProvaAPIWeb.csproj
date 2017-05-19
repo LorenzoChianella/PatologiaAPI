@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Patologie.aspx" />
+    <Content Include="Pazienti.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +101,13 @@
       <DependentUpon>Patologie.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paziente.cs" />
+    <Compile Include="Pazienti.aspx.cs">
+      <DependentUpon>Pazienti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pazienti.aspx.designer.cs">
+      <DependentUpon>Pazienti.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RootObject.cs" />
   </ItemGroup>
