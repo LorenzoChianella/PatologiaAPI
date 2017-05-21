@@ -52,5 +52,14 @@ namespace ProvaAPIWeb
         {
 
         }
+
+        protected void GridView1_OnRowDeleting(object sender, GridViewDeleteEventArgs e) {
+
+            GridViewRow row = (GridViewRow)GridView1.Rows[e.RowIndex];
+            string s = row.Cells[1].Text;
+            ApiRestClient.DeletePaziente(s);
+            GridView1.DataBind();
+
+        }
     }
 }

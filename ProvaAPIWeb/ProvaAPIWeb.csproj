@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="InserisciPatologia.aspx" />
+    <Content Include="Medici.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -92,6 +93,14 @@
       <DependentUpon>InserisciPatologia.aspx</DependentUpon>
     </Compile>
     <Compile Include="JSONManager.cs" />
+    <Compile Include="Medici.aspx.cs">
+      <DependentUpon>Medici.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Medici.aspx.designer.cs">
+      <DependentUpon>Medici.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Medico.cs" />
     <Compile Include="Patologia.cs" />
     <Compile Include="Patologie.aspx.cs">
       <DependentUpon>Patologie.aspx</DependentUpon>

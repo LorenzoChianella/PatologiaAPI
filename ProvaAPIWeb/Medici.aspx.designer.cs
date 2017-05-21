@@ -10,7 +10,7 @@
 namespace ProvaAPIWeb {
     
     
-    public partial class Pazienti {
+    public partial class Medici {
         
         /// <summary>
         /// Controllo form1.

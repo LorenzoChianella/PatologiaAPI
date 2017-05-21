@@ -14,7 +14,7 @@ namespace ProvaAPIWeb
 
         public static RootObject<Paziente> GetPazientiDataFromServer()
         {
-            string url = "http://192.168.4.159:8080/ApiServer/Paziente/all/1";
+            string url = "http://192.168.4.159:8080/ApiServer/Paziente/all/";
             string jsonPazienti = "";
 
             try
@@ -64,14 +64,30 @@ namespace ProvaAPIWeb
             }
         }
 
+        public static RootObject<Medico> GetMediciDataFromServer()
+        {
+            string url = "http://192.168.4.159:8080/ApiServer/Paziente/all";
+            string jsonMedici = "";
 
+            try
+            {
+                jsonMedici = syncClient.DownloadString(url);
+                RootObject<Medico> json = DeserializeJson<RootObject<Medico>>(jsonMedici);
+
+                return json;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
         //public static bool SendCertificatiToServer(List<Certificato> cList)
         //{
         //    var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://url");
         //    httpWebRequest.ContentType = "application/json";
         //    httpWebRequest.Method = "POST";  
-            
-                      
+
+
 
         //    var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
         //    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
@@ -97,6 +113,20 @@ namespace ProvaAPIWeb
             //Chiamare il Serializzatore
             //Inviare il Json della nuova Patologia
             
+        }
+
+        public static void DeletePaziente(string s)
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.4.159:8080/ApiServer/Paziente/delete/" + s);
+            httpWebRequest.Method = "DELETE";
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+        }
+
+        public static void DeleteMedico(string s)
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.4.159:8080/ApiServer/Medico/delete/" + s);
+            httpWebRequest.Method = "DELETE";
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
         }
     }
 }
