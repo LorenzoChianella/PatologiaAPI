@@ -48,7 +48,7 @@ namespace ProvaAPIWeb
         }
         public static RootObject<Certificato> GetCertificatiDataFromServer()
         {
-            string url = "http://192.168.4.159:8080/ApiServer/Certificati";
+            string url = "http://192.168.4.159:8080/ApiServer/Certificati/all";
             string jsonCertificati = "";
 
             try

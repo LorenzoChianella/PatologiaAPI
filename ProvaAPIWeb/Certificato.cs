@@ -17,13 +17,13 @@ namespace ProvaAPIWeb
         [DataMember]
         public string codMedico { get; set; }
         [DataMember]
-        public DateTime dataEmissione { get; set; }
+        public string dataEmissione { get; set; }
         [DataMember]
         public string codPatologia { get; set; }
         [DataMember]
-        public DateTime dataInizio { get; set; }
+        public string dataInizio { get; set; }
         [DataMember]
-        public DateTime dataFine { get; set; }
+        public string dataFine { get; set; }
         [DataMember]
         public string tipologia { get; set; }
         [DataMember]

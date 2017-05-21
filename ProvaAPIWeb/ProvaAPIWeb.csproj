@@ -67,6 +67,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Certificati.aspx" />
     <Content Include="InserisciPatologia.aspx" />
     <Content Include="Medici.aspx" />
     <Content Include="packages.config" />
@@ -84,6 +85,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiRestClient.cs" />
+    <Compile Include="Certificati.aspx.cs">
+      <DependentUpon>Certificati.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Certificati.aspx.designer.cs">
+      <DependentUpon>Certificati.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Certificato.cs" />
     <Compile Include="InserisciPatologia.aspx.cs">
       <DependentUpon>InserisciPatologia.aspx</DependentUpon>
