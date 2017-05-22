@@ -36,9 +36,9 @@ namespace ProvaAPIWeb
 
                 for (int i = 0; i < cer.items; i++)
                 {
-                    dt.Rows.Add(cer.data[i].codPaziente, cer.data[i].codMedico, cer.data[i].dataEmissione, cer.data[i].codPatologia, cer.data[i].dataInizio,
-                        cer.data[i].dataFine, cer.data[i].tipologia, cer.data[i].comune, cer.data[i].provincia, cer.data[i].indirizzo,
-                        cer.data[i].cap, cer.data[i].domicilio, cer.data[i].note);
+                    dt.Rows.Add(cer.data[i].cod_sanitario, cer.data[i].cod_medico, cer.data[i].data_emissione, cer.data[i].cod_patologia, cer.data[i].data_inizio,
+                                cer.data[i].data_fine, cer.data[i].tipologia, cer.data[i].comune, cer.data[i].provincia, cer.data[i].indirizzo,
+                                cer.data[i].CAP, cer.data[i].domicilio, cer.data[i].note);
                 }
                 GridView1.DataSource = dt;
                 GridView1.DataBind();

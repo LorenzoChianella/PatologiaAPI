@@ -14,7 +14,7 @@ namespace ProvaAPIWeb
 
         public static RootObject<Paziente> GetPazientiDataFromServer()
         {
-            string url = "http://192.168.4.159:8080/ApiServer/Paziente/all/";
+            string url = "http://192.168.4.104:8080/ApiServer/Paziente/all";
             string jsonPazienti = "";
 
             try
@@ -31,7 +31,7 @@ namespace ProvaAPIWeb
         }
         public static RootObject<Patologia> GetPatologieDataFromServer()
         {
-            string url = "http://192.168.4.159:8080/ApiServer/Patologia/all";
+            string url = "http://192.168.4.104:8080/ApiServer/Patologia/all";
             string jsonPatologie = "";
 
             try
@@ -48,7 +48,7 @@ namespace ProvaAPIWeb
         }
         public static RootObject<Certificato> GetCertificatiDataFromServer()
         {
-            string url = "http://192.168.4.159:8080/ApiServer/Certificati/all";
+            string url = "http://192.168.4.104:8080/ApiServer/Certificato/all";
             string jsonCertificati = "";
 
             try
@@ -66,7 +66,7 @@ namespace ProvaAPIWeb
 
         public static RootObject<Medico> GetMediciDataFromServer()
         {
-            string url = "http://192.168.4.159:8080/ApiServer/Paziente/all";
+            string url = "http://192.168.4.104:8080/ApiServer/Medico/all";
             string jsonMedici = "";
 
             try
@@ -100,7 +100,7 @@ namespace ProvaAPIWeb
 
         public static void DeletePatologia(string s)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.4.159:8080/ApiServer2/Patologia/delete/" + s);
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.4.104:8080/ApiServer/Patologia/delete/" + s);
             httpWebRequest.Method = "DELETE";
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
         }
@@ -117,14 +117,14 @@ namespace ProvaAPIWeb
 
         public static void DeletePaziente(string s)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.4.159:8080/ApiServer/Paziente/delete/" + s);
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.4.104:8080/ApiServer/Paziente/delete/" + s);
             httpWebRequest.Method = "DELETE";
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
         }
 
         public static void DeleteMedico(string s)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.4.159:8080/ApiServer/Medico/delete/" + s);
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.4.104:8080/ApiServer/Medico/delete/" + s);
             httpWebRequest.Method = "DELETE";
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
         }

@@ -36,9 +36,10 @@ namespace ProvaAPIWeb
 
                 for (int i = 0; i < med.items; i++)
                 {
-                    dt.Rows.Add(med.data[i].nome, med.data[i].cognome, med.data[i].dataNascita, med.data[i].luogoNascita,
-                        med.data[i].codiceFiscale, med.data[i].residenza, med.data[i].provincia, med.data[i].indirizzo,
-                        med.data[i].telefono, med.data[i].cellulare, med.data[i].email, med.data[i].codiceAlbo, med.data[i].codiceMedico);
+                    dt.Rows.Add(med.data[i].nome, med.data[i].cognome, med.data[i].data_nascita, med.data[i].luogo,
+                                med.data[i].cod_fis, med.data[i].residenza, med.data[i].provincia, med.data[i].indirizzo,
+                                med.data[i].telefono, med.data[i].mobile, med.data[i].email, med.data[i].cod_albo,
+                                med.data[i].cod_medico);
                 }
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
@@ -49,7 +50,7 @@ namespace ProvaAPIWeb
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             GridViewRow row = (GridViewRow)GridView1.Rows[e.RowIndex];
-            string s = row.Cells[1].Text;
+            string s = row.Cells[14].Text;
             ApiRestClient.DeleteMedico(s);
             GridView1.DataBind();
         }

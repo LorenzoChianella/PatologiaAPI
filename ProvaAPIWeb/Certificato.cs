@@ -11,32 +11,32 @@ namespace ProvaAPIWeb
     public class Certificato : RootObject<Certificato>
     {
         [DataMember]
-        public int id { get; set; }
+        public string note { get; set; }
         [DataMember]
-        public string codPaziente { get; set; }
+        public string cod_medico { get; set; }
         [DataMember]
-        public string codMedico { get; set; }
+        public string cod_patologia { get; set; }
         [DataMember]
-        public string dataEmissione { get; set; }
-        [DataMember]
-        public string codPatologia { get; set; }
-        [DataMember]
-        public string dataInizio { get; set; }
-        [DataMember]
-        public string dataFine { get; set; }
-        [DataMember]
-        public string tipologia { get; set; }
-        [DataMember]
-        public string comune { get; set; }
-        [DataMember]
-        public string provincia { get; set; }
+        public string data_emissione { get; set; }
         [DataMember]
         public string indirizzo { get; set; }
         [DataMember]
-        public string cap { get; set; }
+        public string data_inizio { get; set; }
+        [DataMember]
+        public string provincia { get; set; }
+        [DataMember]
+        public string idCertificato { get; set; }
+        [DataMember]
+        public string tipologia { get; set; }
         [DataMember]
         public string domicilio { get; set; }
         [DataMember]
-        public string note { get; set; }
+        public string CAP { get; set; }
+        [DataMember]
+        public string comune { get; set; }
+        [DataMember]
+        public string cod_sanitario { get; set; }
+        [DataMember]
+        public string data_fine { get; set; }
     }
 }

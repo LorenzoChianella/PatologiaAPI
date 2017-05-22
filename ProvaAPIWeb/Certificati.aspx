@@ -12,10 +12,6 @@
     <div>
     
         <asp:GridView ID="GridView1" runat="server" Width="643px">
-            <Columns>
-                <asp:CommandField ShowEditButton="True" />
-                <asp:CommandField ShowDeleteButton="True" />
-            </Columns>
         </asp:GridView>
     
     </div>

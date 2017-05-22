@@ -14,11 +14,11 @@ namespace ProvaAPIWeb
         [DataMember]
         public string cognome { get; set; }
         [DataMember]
-        public string luogoNascita { get; set; }
+        public string luogo { get; set; }
         [DataMember]
-        public string dataNascita { get; set; }
+        public string data_nascita { get; set; }
         [DataMember]
-        public string codiceFiscale { get; set; }
+        public string cod_fis { get; set; }
         [DataMember]
         public string residenza { get; set; }
         [DataMember]
@@ -28,13 +28,13 @@ namespace ProvaAPIWeb
         [DataMember]
         public string telefono { get; set; }
         [DataMember]
-        public string cellulare { get; set; }
+        public string mobile { get; set; }
         [DataMember]
         public string email { get; set; }
         [DataMember]
-        public string codiceAlbo { get; set; }
+        public string cod_albo { get; set; }
         [DataMember]
-        public string codiceMedico { get; set; }
+        public string cod_medico { get; set; }
         
 
     }
