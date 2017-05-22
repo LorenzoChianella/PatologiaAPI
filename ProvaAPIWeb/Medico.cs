@@ -7,7 +7,7 @@ using System.Web;
 namespace ProvaAPIWeb
 {
     [DataContract]
-    public class Medico: RootObject<Medico>
+    public class Medico /*: RootObject<Medico>*/
     {
         [DataMember]
         public string nome { get; set; }

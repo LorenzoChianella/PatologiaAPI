@@ -39,8 +39,9 @@ namespace ProvaAPIWeb
         {
 
             GridViewRow row = (GridViewRow)GridView1.Rows[e.RowIndex];
-            string s = row.Cells[1].Text;
+            string s = row.Cells[2].Text;
             ApiRestClient.DeletePatologia(s);
+            Response.Redirect("Patologie.aspx");
             GridView1.DataBind();
 
             // recuperare il codice della patologia associato alla riga eliminata

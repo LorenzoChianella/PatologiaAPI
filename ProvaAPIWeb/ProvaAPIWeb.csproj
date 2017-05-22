@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Certificati.aspx" />
+    <Content Include="InserisciMedico.aspx" />
     <Content Include="InserisciPatologia.aspx" />
     <Content Include="Medici.aspx" />
     <Content Include="packages.config" />
@@ -93,6 +94,13 @@
       <DependentUpon>Certificati.aspx</DependentUpon>
     </Compile>
     <Compile Include="Certificato.cs" />
+    <Compile Include="InserisciMedico.aspx.cs">
+      <DependentUpon>InserisciMedico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InserisciMedico.aspx.designer.cs">
+      <DependentUpon>InserisciMedico.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InserisciPatologia.aspx.cs">
       <DependentUpon>InserisciPatologia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

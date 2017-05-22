@@ -20,7 +20,8 @@ namespace ProvaAPIWeb
             pat.cod_patologia = txtcodice.Text;
             pat.nome = txtnome.Text;
             pat.descrizione = txtdescrizione.Text;
-            JSONManager.SerializePatologiaJson(pat);
+            ApiRestClient.SendPatologiaToServer(pat);
+            Response.Redirect("Patologie.aspx");
         }
     }
 }

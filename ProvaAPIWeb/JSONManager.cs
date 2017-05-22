@@ -24,12 +24,18 @@ namespace ProvaAPIWeb
         }
 
         //Serializza i dati dellein JSON e li invia al server
-        public static string SerializePatologiaJson(Patologia p)
-        {
-            string json = "{\"+cod_patologia\":\"" + p.cod_patologia + "\"," +
-                           "\"nome\":\"" + p.nome + "\"," +
-                           "\"descrizione\":\"" + p.descrizione +"\"}";
-            return json;
+        public static string SerializeJson<T>(T t)
+        //{
+        //    string json = "{\"+cod_patologia\":\"" + p.cod_patologia + "\"," +
+        //                   "\"nome\":\"" + p.nome + "\"," +
+        //                   "\"descrizione\":\"" + p.descrizione +"\"}";
+        //    return json;
+        //}
+        { 
+        DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(T));
+        MemoryStream ms = new MemoryStream();
+        serializer.WriteObject(ms, t);
+            return Encoding.UTF8.GetString(ms.ToArray());
         }
     }
 }

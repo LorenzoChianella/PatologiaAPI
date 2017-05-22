@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ProvaAPIWeb
 {
     [DataContract]
-    public class Patologia : RootObject<Patologia>
+    public class Patologia/* : RootObject<Patologia>*/
     {
         [DataMember]
         public string cod_patologia { get; set; }

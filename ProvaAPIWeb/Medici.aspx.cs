@@ -52,7 +52,13 @@ namespace ProvaAPIWeb
             GridViewRow row = (GridViewRow)GridView1.Rows[e.RowIndex];
             string s = row.Cells[14].Text;
             ApiRestClient.DeleteMedico(s);
+            Response.Redirect("Medici.aspx");
             GridView1.DataBind();
+        }
+
+        protected void btnInserisciNuovo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InserisciMedico.aspx");
         }
     }
 }

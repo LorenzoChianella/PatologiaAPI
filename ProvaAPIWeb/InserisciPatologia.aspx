@@ -18,6 +18,7 @@
         .auto-style1 {
             margin-left: 35px;
         }
+
         .auto-style2 {
             margin-left: 33px;
         }
@@ -45,29 +46,19 @@
                         <label for="txtdescrizione">Descrizione:</label>
                         <asp:TextBox ID="txtdescrizione" runat="server" class="form-control" Rows="5" TextMode="MultiLine" Width="238px"></asp:TextBox>
                     </div>
-                    
-                    
 
+
+                    <asp:Button ID="btnSalva" runat="server" Height="31px" OnClick="btnSalva_Click" Text="Salva" Width="100px" />
                 </form>
             </section>
-
-
         </div>
-
     </div>
-
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
     <!--<script src="contactform/contactform.js"></script>-->
-
-    
-
-    <asp:Button ID="btnSalva" runat="server" Height="31px" OnClick="btnSalva_Click" Text="Salva" Width="100px" />
-
-    
 
 </body>
 </html>

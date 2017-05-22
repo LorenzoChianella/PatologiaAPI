@@ -63,7 +63,6 @@ namespace ProvaAPIWeb
                 return null;
             }
         }
-
         public static RootObject<Medico> GetMediciDataFromServer()
         {
             string url = "http://192.168.4.104:8080/ApiServer/Medico/all";
@@ -107,12 +106,21 @@ namespace ProvaAPIWeb
 
         public static void SendPatologiaToServer(Patologia p) {
 
-            Patologia tmpPat = new Patologia();
+            try
+            {
+                string url = "http://192.168.4.104:8080/ApiServer/Patologia/write";
+                syncClient.Headers.Add("Content-Type", "application/json");
+                string jsonPatologia = SerializeJson<Patologia>(p);
+                syncClient.UploadString(url, jsonPatologia);
+            }
 
             //TODO: Associare il contenuto delle txtBox ai campi della patologia.
             //Chiamare il Serializzatore
-            //Inviare il Json della nuova Patologia
-            
+            //Inviare il Json della nuova Patologia}
+            catch (Exception e)
+            {
+                throw new Exception("errore durante l'inserimento" + e);
+            }
         }
 
         public static void DeletePaziente(string s)
@@ -120,6 +128,14 @@ namespace ProvaAPIWeb
             var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.4.104:8080/ApiServer/Paziente/delete/" + s);
             httpWebRequest.Method = "DELETE";
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+        }
+
+        public static void SendMedicoToServer(Medico m) {
+
+            string url = "http://192.168.4.104:8080/ApiServer/Medico/write";
+            syncClient.Headers.Add("Content-Type", "application/json");
+            string jsonMedico = SerializeJson<Medico>(m);
+            syncClient.UploadString(url, jsonMedico);
         }
 
         public static void DeleteMedico(string s)

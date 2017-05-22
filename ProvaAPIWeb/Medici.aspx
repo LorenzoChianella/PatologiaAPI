@@ -19,6 +19,7 @@
         </asp:GridView>
     
     </div>
+        <asp:Button ID="btnInserisciNuovo" runat="server" Height="39px" Text="Inserisci nuovo medico" Width="144px" OnClick="btnInserisciNuovo_Click"/>
     </form>
 </body>
 </html>
