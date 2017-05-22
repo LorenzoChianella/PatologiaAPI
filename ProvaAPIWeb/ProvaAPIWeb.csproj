@@ -71,6 +71,7 @@
     <Content Include="InserisciMedico.aspx" />
     <Content Include="InserisciPatologia.aspx" />
     <Content Include="Medici.aspx" />
+    <Content Include="ModificaPatologia.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -117,6 +118,13 @@
       <DependentUpon>Medici.aspx</DependentUpon>
     </Compile>
     <Compile Include="Medico.cs" />
+    <Compile Include="ModificaPatologia.aspx.cs">
+      <DependentUpon>ModificaPatologia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificaPatologia.aspx.designer.cs">
+      <DependentUpon>ModificaPatologia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Patologia.cs" />
     <Compile Include="Patologie.aspx.cs">
       <DependentUpon>Patologie.aspx</DependentUpon>

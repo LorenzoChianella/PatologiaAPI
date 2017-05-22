@@ -97,6 +97,25 @@ namespace ProvaAPIWeb
         //    return true;
         //}
 
+        public static RootObject<Patologia> GetPatologia(string s) {
+
+            string url = "http://192.168.4.104:8080/ApiServer/Patologia/" +s;
+            string jsonPatologia = "";
+
+            try
+            {
+                jsonPatologia = syncClient.DownloadString(url);
+                RootObject<Patologia> json = DeserializeJson<RootObject<Patologia>>(jsonPatologia);
+
+                return json;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+        }
+
         public static void DeletePatologia(string s)
         {
             var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.4.104:8080/ApiServer/Patologia/delete/" + s);

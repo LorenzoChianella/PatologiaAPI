@@ -50,7 +50,7 @@ namespace ProvaAPIWeb
 
         protected void GridView1_RowCreated(object sender, GridViewRowEventArgs e)
         {
-            e.Row.Cells[1].Visible = false; // hides the first column
+            e.Row.Cells[2].Visible = false; // hides the first column
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -61,8 +61,8 @@ namespace ProvaAPIWeb
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
             GridViewRow row = (GridViewRow)GridView1.Rows[e.NewEditIndex];
-            string s = row.Cells[1].Text;
-            Response.Redirect("");
+            string s = row.Cells[2].Text;
+            Response.Redirect("ModificaPatologia.aspx/"+ s);
 
         }
 
