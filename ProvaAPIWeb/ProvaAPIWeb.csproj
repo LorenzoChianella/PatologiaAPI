@@ -68,12 +68,56 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Certificati.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\theme.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="img\bg-banner.jpg" />
+    <Content Include="img\doctor1.jpg" />
+    <Content Include="img\doctor2.jpg" />
+    <Content Include="img\doctor3.jpg" />
+    <Content Include="img\doctor4.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\thumb.png" />
+    <Content Include="index.aspx" />
     <Content Include="InserisciMedico.aspx" />
     <Content Include="InserisciPatologia.aspx" />
     <Content Include="InserisciPaziente.aspx" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\jquery.easing.min.js" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="Medici.aspx" />
     <Content Include="ModificaPatologia.aspx" />
     <Content Include="packages.config" />
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <None Include="scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="scripts\jquery-2.2.0.js" />
+    <Content Include="scripts\jquery-2.2.0.min.js" />
+    <Content Include="scripts\jquery-ui-1.10.2.js" />
+    <Content Include="scripts\jquery-ui-1.10.2.min.js" />
+    <Content Include="scripts\jquery-ui-i18n.js" />
+    <Content Include="scripts\jquery-ui-i18n.min.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\MyScripts.js" />
+    <Content Include="templates\footer.tpl" />
+    <Content Include="templates\header.tpl" />
+    <Content Include="templates\menu.tpl" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="scripts\jquery-2.2.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -96,6 +140,13 @@
       <DependentUpon>Certificati.aspx</DependentUpon>
     </Compile>
     <Compile Include="Certificato.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InserisciMedico.aspx.cs">
       <DependentUpon>InserisciMedico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,7 +202,12 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RootObject.cs" />
+    <Compile Include="templates\header.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\header.aspx.designer.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
