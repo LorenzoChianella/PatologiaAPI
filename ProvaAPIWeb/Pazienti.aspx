@@ -32,6 +32,7 @@
         <section class="container content-container">
 
             <div class="table-wrapper col-md-12">
+
                 <h3>Tabella Pazienti</h3>
                 <div class="searchInput">  
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>

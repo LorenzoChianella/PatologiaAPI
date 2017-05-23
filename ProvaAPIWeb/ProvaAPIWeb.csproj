@@ -90,6 +90,7 @@
     <Content Include="js\jquery.easing.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="Medici.aspx" />
+    <Content Include="ModificaMedico.aspx" />
     <Content Include="ModificaPatologia.aspx" />
     <Content Include="packages.config" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
@@ -177,6 +178,13 @@
       <DependentUpon>Medici.aspx</DependentUpon>
     </Compile>
     <Compile Include="Medico.cs" />
+    <Compile Include="ModificaMedico.aspx.cs">
+      <DependentUpon>ModificaMedico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificaMedico.aspx.designer.cs">
+      <DependentUpon>ModificaMedico.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ModificaPatologia.aspx.cs">
       <DependentUpon>ModificaPatologia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
