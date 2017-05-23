@@ -29,6 +29,7 @@ namespace ProvaAPIWeb
                 return null;
             }
         }
+
         public static RootObject<Patologia> GetPatologieDataFromServer()
         {
             string url = "http://192.168.4.104:8080/ApiServer/Patologia/all";
@@ -46,6 +47,7 @@ namespace ProvaAPIWeb
                 return null;
             }
         }
+
         public static RootObject<Certificato> GetCertificatiDataFromServer()
         {
             string url = "http://192.168.4.104:8080/ApiServer/Certificato/all";
@@ -63,6 +65,7 @@ namespace ProvaAPIWeb
                 return null;
             }
         }
+
         public static RootObject<Medico> GetMediciDataFromServer()
         {
             string url = "http://192.168.4.104:8080/ApiServer/Medico/all";
@@ -80,22 +83,6 @@ namespace ProvaAPIWeb
                 return null;
             }
         }
-        //public static bool SendCertificatiToServer(List<Certificato> cList)
-        //{
-        //    var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://url");
-        //    httpWebRequest.ContentType = "application/json";
-        //    httpWebRequest.Method = "POST";  
-
-
-
-        //    var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-        //    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-        //    {
-        //        var result = streamReader.ReadToEnd();
-        //    }
-
-        //    return true;
-        //}
 
         public static RootObject<Patologia> GetPatologia(string s) {
 
@@ -149,12 +136,12 @@ namespace ProvaAPIWeb
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
         }
 
-        public static void SendMedicoToServer(Medico m) {
-
-            string url = "http://192.168.4.104:8080/ApiServer/Medico/write";
+        public static void SendPazienteToServer(Paziente p)
+        {
+            string url = "http://192.168.4.104:8080/ApiServer/Paziente/write";
             syncClient.Headers.Add("Content-Type", "application/json");
-            string jsonMedico = SerializeJson<Medico>(m);
-            syncClient.UploadString(url, jsonMedico);
+            string jsonPaziente = SerializeJson<Paziente>(p);
+            syncClient.UploadString(url, jsonPaziente);
         }
 
         public static void DeleteMedico(string s)
@@ -162,6 +149,14 @@ namespace ProvaAPIWeb
             var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.4.104:8080/ApiServer/Medico/delete/" + s);
             httpWebRequest.Method = "DELETE";
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+        }
+
+        public static void SendMedicoToServer(Medico m) {
+
+            string url = "http://192.168.4.104:8080/ApiServer/Medico/write";
+            syncClient.Headers.Add("Content-Type", "application/json");
+            string jsonMedico = SerializeJson<Medico>(m);
+            syncClient.UploadString(url, jsonMedico);
         }
     }
 }
