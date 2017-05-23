@@ -14,18 +14,13 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <style type="text/css">
-        .auto-style1 {
-            margin-left: 35px;
-        }
-
-        .auto-style2 {
-            margin-left: 33px;
-        }
-    </style>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <!--#include file="templates/menu.tpl"-->
+
+
 
     <div class="container">
 
@@ -33,32 +28,36 @@
         <div class="col-md-6">
             <section class="container content-container">
                 <form runat="server">
-                    <h3>Inserimento nuova Patologia</h3>
-                    <div class="form-group">
-                        <label for="txtcodice">Codice:</label>
-                        <asp:TextBox ID="txtcodice" runat="server" class="form-control" CssClass="auto-style2" Width="191px"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label for="txtnome">Nome:</label>
-                        <asp:TextBox ID="txtnome" runat="server" class="form-control" CssClass="auto-style1" Width="198px"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label for="txtdescrizione">Descrizione:</label>
-                        <asp:TextBox ID="txtdescrizione" runat="server" class="form-control" Rows="5" TextMode="MultiLine" Width="238px"></asp:TextBox>
-                    </div>
+                    <fieldset>
+                        <legend>Inserimento Nuova Patologia</legend>
+                        <div class="form-group">
+                            <label for="txtcodice">Codice:</label>
+                            <asp:TextBox ID="txtcodice" runat="server" class="form-control" CssClass="auto-style2" Width="191px"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtnome">Nome:</label>
+                            <asp:TextBox ID="txtnome" runat="server" class="form-control" CssClass="auto-style1" Width="198px"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtdescrizione">Descrizione:</label>
+                            <asp:TextBox ID="txtdescrizione" runat="server" class="form-control" Rows="5" TextMode="MultiLine" Width="238px"></asp:TextBox>
+                        </div>
 
 
-                    <asp:Button ID="btnSalva" runat="server" Height="31px" OnClick="btnSalva_Click" Text="Salva" Width="100px" />
+                        <asp:Button ID="btnSalva" runat="server" Height="31px" OnClick="btnSalva_Click" Text="Salva" Width="100px" />
+
+                    </fieldset>
                 </form>
             </section>
         </div>
-    </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-    <!--<script src="contactform/contactform.js"></script>-->
+        <div class="col-md-2"></div>
+
+
+
+    </div>
+    <!--#include file="templates/footer.tpl"-->
+
 
 </body>
 </html>
