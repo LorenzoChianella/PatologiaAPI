@@ -62,7 +62,7 @@ namespace ProvaAPIWeb
         {
             GridViewRow row = (GridViewRow)GridView1.Rows[e.NewEditIndex];
             string s = row.Cells[2].Text;
-            Response.Redirect("ModificaPatologia.aspx/"+ s);
+            Response.Redirect("ModificaPatologia.aspx?cod_patologia="+ s);
 
         }
 

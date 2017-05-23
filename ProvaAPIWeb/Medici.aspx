@@ -37,7 +37,7 @@
                 </div>
                 <br />
 
-                <asp:GridView ID="GridView1" runat="server" Height="145px" Width="749px" OnRowDeleting="GridView1_RowDeleting">
+                <asp:GridView ID="GridView1" runat="server" Height="145px" Width="749px" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing">
                     <Columns>
                         <asp:CommandField ShowEditButton="True" />
                         <asp:CommandField ShowDeleteButton="True" />

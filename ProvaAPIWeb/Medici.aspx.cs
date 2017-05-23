@@ -60,5 +60,13 @@ namespace ProvaAPIWeb
         {
             Response.Redirect("InserisciMedico.aspx");
         }
+
+        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            GridViewRow row = (GridViewRow)GridView1.Rows[e.NewEditIndex];
+            string cod_medico = row.Cells[14].Text;
+            Response.Redirect("ModificaMedico.aspx?cod_medico=" + cod_medico);
+
+        }
     }
 }

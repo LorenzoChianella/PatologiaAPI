@@ -15,46 +15,50 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
-<body  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <!--#include file="templates/menu.tpl"-->
 
     <div class="container">
 
         <div class="col-md-3"></div>
         <div class="col-md-6">
-    <section class="container content-container">
-        <form id="formPatologia" runat="server">
-            <fieldset>
-                <legend>Modifica Patologia</legend>
-                <div class="form-group">
-                    <label for="txtcod_patologia">Codice:</label>
-                    <br />
-                    <asp:TextBox ID="txtcod_patologia" runat="server" class="form-control" ReadOnly="true"></asp:TextBox>
-                </div>
-                <div class="form-group">
-                    <label for="txtnome">Nome:</label>
-                    <asp:TextBox ID="txtnome" runat="server" class="form-control"></asp:TextBox>
-                </div>
-                <div class="form-group">
-                    <label for="txtdescrizione">Descrizione:</label>
-                    <asp:TextBox ID="txtdescrizione" runat="server" class="form-control" TextMode="MultiLine"></asp:TextBox>
-                </div>
-                <br />
-                <div class="btn-group">
-
-                    <asp:Button ID="btnSalva" runat="server" Height="34px" Text="Salva" Width="148px" OnClick="btnSalva_Click"/>
-
-                </div>
-            </fieldset>
-
-        </form>
-
-    </section>
-            </div>
+            <section class="container content-container">
+                <form id="formPatologia" runat="server">
+                    <fieldset>
+                        <legend>Modifica Patologia</legend>
+                        <div class="form-group">
+                            <label for="txtcod_patologia">Codice:</label>
+                            <br />
+                            <asp:TextBox ID="txtcod_patologia" runat="server" class="form-control" ReadOnly="true"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtnome">Nome:</label>
+                            <asp:TextBox ID="txtnome" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtdescrizione">Descrizione:</label>
+                            <asp:TextBox ID="txtdescrizione" runat="server" class="form-control" TextMode="MultiLine"></asp:TextBox>
+                        </div>
+                        <br />
+                        <div class="btn-group">
+                            <asp:Button ID="btnsalva" runat="server" Text="Salva Modifiche" class="btn btn-primary" OnClick="btnsalva_Click" Style="margin-right: 10px" />
+                            <a href="Patologie.aspx" class="btn btn-primary">Annulla</a>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
     </div>
 
     <!--#include file="templates/footer.tpl"-->
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!--<script src="contactform/contactform.js"></script>-->
+
 </body>
 </html>
+

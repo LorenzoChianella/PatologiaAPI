@@ -16,7 +16,7 @@ namespace ProvaAPIWeb
         {
             T result;
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(T));
-            using (MemoryStream ms = new MemoryStream(Encoding.Unicode.GetBytes(json)))
+            using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(json)))
             {
                 result = (T)serializer.ReadObject(ms);
             }

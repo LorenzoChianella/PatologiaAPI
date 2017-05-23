@@ -84,7 +84,7 @@ namespace ProvaAPIWeb
             }
         }
 
-        public static RootObject<Patologia> GetPatologia(string s) {
+        public static Patologia GetPatologia(string s) {
 
             string url = "http://192.168.4.104:8080/ApiServer/Patologia/" +s;
             string jsonPatologia = "";
@@ -92,7 +92,7 @@ namespace ProvaAPIWeb
             try
             {
                 jsonPatologia = syncClient.DownloadString(url);
-                RootObject<Patologia> json = DeserializeJson<RootObject<Patologia>>(jsonPatologia);
+                Patologia json = DeserializeJson<Patologia>(jsonPatologia);
 
                 return json;
             }
@@ -101,6 +101,25 @@ namespace ProvaAPIWeb
                 return null;
             }
 
+        }
+
+        public static RootObject<Medico> GetMedico(string s) {
+
+            string url = "http://192.168.4.104:8080/ApiServer/Medico/get/" + s;
+            string jsonMedico = "";
+
+            try
+            {
+                syncClient.Encoding = Encoding.UTF8;
+                jsonMedico = syncClient.DownloadString(url);
+                RootObject<Medico> json = DeserializeJson<RootObject<Medico>>(jsonMedico);
+
+                return json;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public static void DeletePatologia(string s)

@@ -10,25 +10,16 @@
 namespace ProvaAPIWeb {
     
     
-    public partial class ModificaMedico {
+    public partial class ModificaPaziente {
         
         /// <summary>
-        /// formMedico control.
+        /// formPaziente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formMedico;
-        
-        /// <summary>
-        /// txtcodmedico control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcodmedico;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formPaziente;
         
         /// <summary>
         /// txtnome control.
@@ -130,13 +121,40 @@ namespace ProvaAPIWeb {
         protected global::System.Web.UI.WebControls.TextBox txtemail;
         
         /// <summary>
-        /// txtcodalbo control.
+        /// txtcodicesanitario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcodalbo;
+        protected global::System.Web.UI.WebControls.TextBox txtcodicesanitario;
+        
+        /// <summary>
+        /// ddlmedico control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlmedico;
+        
+        /// <summary>
+        /// txtsesso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtsesso;
+        
+        /// <summary>
+        /// txtcap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtcap;
         
         /// <summary>
         /// btnsalva control.

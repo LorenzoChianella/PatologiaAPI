@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace ProvaAPIWeb
 {
@@ -11,16 +12,24 @@ namespace ProvaAPIWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string codice = Request["cod_patologia"];
-            ApiRestClient.GetPatologia(codice);
-
-
-
+            if (!IsPostBack)
+            {
+                string codice = Request["cod_patologia"];
+                Patologia pat = ApiRestClient.GetPatologia(codice);
+            }
+                
         }
 
-        protected void btnSalva_Click(object sender, EventArgs e)
+        protected void btnsalva_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        protected void RiempiTxt()
+        {
+            
 
         }
+
     }
 }

@@ -92,6 +92,7 @@
     <Content Include="Medici.aspx" />
     <Content Include="ModificaMedico.aspx" />
     <Content Include="ModificaPatologia.aspx" />
+    <Content Include="ModificaPaziente.aspx" />
     <Content Include="packages.config" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
@@ -191,6 +192,13 @@
     </Compile>
     <Compile Include="ModificaPatologia.aspx.designer.cs">
       <DependentUpon>ModificaPatologia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificaPaziente.aspx.cs">
+      <DependentUpon>ModificaPaziente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificaPaziente.aspx.designer.cs">
+      <DependentUpon>ModificaPaziente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Patologia.cs" />
     <Compile Include="Patologie.aspx.cs">

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificaMedico.aspx.cs" Inherits="ProvaAPIWeb.ModificaMedico" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificaPaziente.aspx.cs" Inherits="ProvaAPIWeb.ModificaPaziente" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Modifica Medico</title>
+    <title>Modifica Paziente</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com" />
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template" />
 
@@ -24,16 +24,12 @@
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <section class="container content-container">
-                <form id="formMedico" runat="server">
+                <form id="formPaziente" runat="server">
                     <fieldset>
-                        <legend>Modifica Medico</legend>
-                        <div class="form-group">
-                            <label for="txtcodmedico">Codice Medico:</label>
-                            <asp:TextBox ID="txtcodmedico" runat="server" class="form-control" ReadOnly="true"></asp:TextBox>
-                        </div>
+                        <legend>Modifica Paziente</legend>
                        <div class="form-group">
-                            <label for="txtnome">Nome: <span style="color: red;">*</span></label>
-                            <asp:TextBox ID="txtnome" runat="server" class="form-control"></asp:TextBox>
+                            <label for="txtnome">Nome: <span style="color: red;" >*</span></label>
+                            <asp:TextBox ID="txtnome" runat="server" class="form-control" ReadOnly="true"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label for="txtcognome">Cognome: <span style="color: red;">*</span></label>
@@ -76,13 +72,27 @@
                             <asp:TextBox ID="txtemail" runat="server" class="form-control" TextMode="Email"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label for="txtcodalbo">Codice Albo:</label>
-                            <asp:TextBox ID="txtcodalbo" runat="server" class="form-control"></asp:TextBox>
+
+                            <label for="CodiceSanitario">Codice Sanitario: <span style="color: red;">*</span></label>
+                            <asp:TextBox ID="txtcodicesanitario" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <label for="ddlmedico">Medico:</label><br />
+                            <asp:DropDownList ID="ddlmedico" runat="server" DataSourceID="SqlDataSource1" DataValueField="codice" DataTextField="dottore" Width="100%" ></asp:DropDownList>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtsesso">Sesso:</label>
+                            <asp:TextBox ID="txtsesso" runat="server" class="form-control" MaxLength="1"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+
+                            <label for="txtcap">CAP:<span style="color: red;">*</span></label>
+                            <asp:TextBox ID="txtcap" runat="server" class="form-control" MaxLength="5"></asp:TextBox>
                         </div>
                         <br />
                         <div class="btn-group">
                             <asp:Button ID="btnsalva" runat="server" Text="Salva Modifiche" class="btn btn-primary" OnClick="btnsalva_Click" Style="margin-right: 10px" />
-                            <a href="Medici.aspx" class="btn btn-primary">Annulla</a>
+                            <a href="Pazienti.aspx" class="btn btn-primary">Annulla</a>
                         </div>
                     </fieldset>
                 </form>
